@@ -17,7 +17,7 @@ const InviteDashboard = () => {
           <h1 className="text-center text-[22px] font-semibold mb-2">
             Invite People to Your Dashboard
           </h1>
-          <p className="text-[#6B7280] text-center text-sm m-4">
+          <p className="text-[#6B7280] text-center text-sm m-[20px]">
             Share your file with others to collect feedback, collaborate,
             facilitate ideas and enhance communications.
           </p>
@@ -30,7 +30,7 @@ const InviteDashboard = () => {
               className="border border-[#E5E7EB] p-2 rounded-lg !placeholder:align-center text-xs pr-20 w-full"
             />
             <select
-              className="absolute right-[4px] top-[3px] p-[5px] border-none text-xs bg-[#F3F4F6] font-medium rounded-lg w-24 h-[28px] text-center appearance-none pr-8"
+              className="absolute right-[4px] top-[3px] p-[5px] border-none text-xs bg-[#F3F4F6] font-medium rounded-lg w-24 h-[28px] text-center appearance-none pr-8 hover:bg-gray-200"
               style={{
                 backgroundImage: "url('/assets/selector.svg')",
                 backgroundRepeat: "no-repeat",
@@ -40,10 +40,10 @@ const InviteDashboard = () => {
               }}
             >
               <option>Can edit</option>
+              <option>View Only</option>
             </select>
           </div>
-          <button className="text-white px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap bg-custom-gradient">
-            <span className="block sm:hidden">Send</span>
+          <button className="text-white px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap bg-custom-gradient hover:opacity-90 transition-opacity duration-200">
             <span className="hidden sm:block bg-custom-gradient">
               Send Invitations
             </span>
@@ -102,10 +102,15 @@ const InviteDashboard = () => {
         <div className="flex items-center justify-between p-4 bg-white">
           <label className="flex items-center space-x-1 text-xs">
             <img src="/assets/Lock.svg" className="w-[16px] h-[16px]" />
-            <span>Only people with access can view</span>
-            <img src="/assets/ArrowDown.svg" className="w-[16px] h-[16px]" />
+
+            <select>
+              <img src="/assets/ArrowDown.svg" className="w-[16px] h-[16px]" />
+              <option>Only people with access can view</option>
+              <option>Can edit</option>
+              <option>View Only</option>
+            </select>
           </label>
-          <button className="flex items-center gap-[3px] color-black pl-2 pr-2 pt-1 pb-1 border border-black rounded-lg font-medium text-xs">
+          <button className="flex items-center gap-[3px] color-black pl-2 pr-2 pt-1 pb-1 border border-black rounded-lg font-medium text-xs hover:bg-gray-100 hover:border-transparent">
             <img src="/assets/switch.svg" className="w-[16px] h-[16px]" />
             Copy link
           </button>
@@ -160,7 +165,7 @@ const UserItem = ({
       </div>
       <div className="ml-auto">
         <select
-          className="border-none p-1 text-xs bg-[#F3F4F6] font-medium rounded-lg w-24 h-[28px] text-center appearance-none pr-8"
+          className="border-none p-1 text-xs bg-[#F3F4F6] font-medium rounded-lg w-24 h-[28px] text-right appearance-none pr-8 hover:bg-gray-200"
           style={{
             backgroundImage: "url('/assets/selector.svg')",
             backgroundRepeat: "no-repeat",
@@ -170,7 +175,6 @@ const UserItem = ({
           }}
         >
           <option>{permission}</option>
-          <option>Can edit</option>
           <option>View only</option>
         </select>
       </div>
