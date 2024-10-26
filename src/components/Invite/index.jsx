@@ -174,7 +174,9 @@ const UserItem = ({
           }}
         >
           <option>{permission}</option>
-          <option>View Only</option>
+          <option>
+            {permission === "Can edit" ? "View only" : "Can edit"}
+          </option>
         </select>
       </div>
     </div>
