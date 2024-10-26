@@ -99,15 +99,14 @@ const InviteDashboard = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between p-4 bg-white">
+        <div className="flex items-center justify-between p-4 bg-white ml-[6px] mr-[6px]">
           <label className="flex items-center space-x-1 text-xs">
             <img src="/assets/Lock.svg" className="w-[16px] h-[16px]" />
 
             <select>
               <img src="/assets/ArrowDown.svg" className="w-[16px] h-[16px]" />
               <option>Only people with access can view</option>
-              <option>Can edit</option>
-              <option>View Only</option>
+              <option>Only people with access can edit</option>
             </select>
           </label>
           <button className="flex items-center gap-[3px] color-black pl-2 pr-2 pt-1 pb-1 border border-black rounded-lg font-medium text-xs hover:bg-gray-100 hover:border-transparent">
@@ -165,7 +164,7 @@ const UserItem = ({
       </div>
       <div className="ml-auto">
         <select
-          className="border-none p-1 text-xs bg-[#F3F4F6] font-medium rounded-lg w-24 h-[28px] text-right appearance-none pr-8 hover:bg-gray-200"
+          className="p-[5px] border-none text-xs bg-[#F3F4F6] font-medium rounded-lg w-24 h-[28px] text-center appearance-none pr-8 hover:bg-gray-200"
           style={{
             backgroundImage: "url('/assets/selector.svg')",
             backgroundRepeat: "no-repeat",
@@ -175,7 +174,7 @@ const UserItem = ({
           }}
         >
           <option>{permission}</option>
-          <option>View only</option>
+          <option>View Only</option>
         </select>
       </div>
     </div>
